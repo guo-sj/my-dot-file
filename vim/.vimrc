@@ -93,6 +93,15 @@ set foldmethod=syntax
 let javaScript_fold=1             " JavaScript
 let g:markdown_folding=1          " markdown
 
+" set path
+let pwd = getcwd()
+if pwd == "/home/guosj/Documents/xuelang/suanpan-link-drivers/drivers/iec60870"
+    echo "enter directory iec60870"
+    set path=.,/usr/include,lib,lib/lib-src/iec60870/cs104,,
+elseif pwd == "/home/guosj/Documents/xuelang/suanpan-link-drivers/drivers/bacnet"
+    echo "enter directory bacnet"
+    set path+=lib
+endif
 " /********************* set commands end *********************/
 
 
@@ -101,13 +110,35 @@ let g:markdown_folding=1          " markdown
 " normal mode map
 nnoremap <F9>     :w<CR>
 nnoremap <F10>    :q<CR>
+" get vim command window
 nnoremap <F8>     q:
-nnoremap <F7>     :!git diff<CR>
+nnoremap ]q       :cnext<CR>
+nnoremap [q       :cprevious<CR>
 nnoremap <Up>     <C-W>k
 nnoremap <Down>   <C-W>j
 nnoremap <Left>   <C-W>h
 nnoremap <Right>  <C-W>l
+" add semicolon(;) to end of a line, useful for C/C++
 nnoremap <End>    A;<Esc>
+" perform make utility
+nnoremap ]m       :make<CR>
+" reload configure file
+nnoremap ]r       :source ~/.vimrc<CR>
+" open a terminal
+nnoremap ]t       :terminal<CR>
+" edit ~/.vimrc
+nnoremap ]ec      :split ~/.vimrc<CR>
+
+" shortcut for fugitive command Git push
+nnoremap ]gp      :Git push<CR>
+" shortcut for fugitive command Git diff --stat
+nnoremap ]gs      :Git diff --stat<CR>
+" shortcut for fugitive command Git diff --stat --cached
+nnoremap ]gc      :Git diff --stat --cached<CR>
+" shortcut for fugitive command Git log --stat
+nnoremap ]go      :Git log --stat<CR>
+" shortcut for fugitive command Git pull
+nnoremap ]gu      :Git pull<CR>
 
 
 " insert mode map
@@ -169,18 +200,19 @@ filetype plugin indent on
 
 " Open the existing NERDtree on each new tab
 " autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDtreeMirror | endif
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " /**************** NERDtree config end ****************/
 
 " Syntax highlighting requires a loaded plugin
 syntax enable
+" set background=light
 set background=dark
 " let g:solarized_termcolors=256
 let g:solarized_underline = 0 " disable underlining, esp. for folds
 colorscheme solarized
 
 " vim-airline configurations
-let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+" let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 let g:airline_solarized_bg='dark'  " set airline theme to solarized dark
 
 
