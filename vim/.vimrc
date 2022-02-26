@@ -1,5 +1,68 @@
 " my personal vim config file
 
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+"
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" vim-go
+Plugin 'fatih/vim-go'
+
+" NERDtree
+Plugin 'preservim/nerdtree'
+
+" airline
+Plugin 'vim-airline/vim-airline'
+
+" gitgutter
+Plugin 'airblade/vim-gitgutter'
+
+" vim color -- solarized
+Plugin 'altercation/vim-colors-solarized'
+
+" fuzzy search
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" man page
+Plugin 'vim-utils/vim-man'
+
+" sensible
+Plugin 'tpope/vim-sensible'
+
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+"
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line)
+
 
 " /**************** the original example vimrc's content start ****************/
 " When started as "evim", evim.vim will already have done these settings, bail
@@ -9,7 +72,7 @@ if v:progname =~? "evim"
 endif
 
 " Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
+" source $VIMRUNTIME/defaults.vim
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
@@ -49,9 +112,9 @@ endif " has("autocmd")
 " compatible.
 " The ! means the package won't be loaded right away but when plugins are
 " loaded during initialization.
-if has('syntax') && has('eval')
-  packadd! matchit
-endif
+" if has('syntax') && has('eval')
+"  packadd! matchit
+"endif
 " /**************** the original example vimrc's content end ****************/
 
 
@@ -67,9 +130,6 @@ set shiftwidth=4
 
 " set tab to 4 spaces
 set expandtab
-
-" set tags for camera project
-"set tags=~/suanpan-c/devices/instrument/camera_new/tags
 
 " set foldcolumn
 set foldcolumn=3
@@ -95,12 +155,15 @@ let g:markdown_folding=1          " markdown
 
 " set path
 let pwd = getcwd()
-if pwd == "/home/guosj/Documents/xuelang/suanpan-link-drivers/drivers/iec60870"
-    echo "enter directory iec60870"
-    set path=.,/usr/include,lib,lib/lib-src/iec60870/cs104,,
-elseif pwd == "/home/guosj/Documents/xuelang/suanpan-link-drivers/drivers/bacnet"
-    echo "enter directory bacnet"
-    set path+=lib
+if pwd == "/home/guosj/Documents/guo-sj/github/seaweedfs"
+    echo "enter directory seaweedfs"
+    set path=.,/usr/include,weed/**
+elseif pwd == "/home/guosj/Documents/guo-sj/github/guo-sj.github.io/"
+    echo "enter directory guo-sj.github.io"
+    set path+=**
+elseif pwd == "/home/guosj/Documents/guo-sj/github/anki/"
+    echo "enter directory anki"
+    set path=.,/usr/include,**
 endif
 " /********************* set commands end *********************/
 
@@ -118,16 +181,23 @@ nnoremap <Up>     <C-W>k
 nnoremap <Down>   <C-W>j
 nnoremap <Left>   <C-W>h
 nnoremap <Right>  <C-W>l
+
 " add semicolon(;) to end of a line, useful for C/C++
 nnoremap <End>    A;<Esc>
 " perform make utility
 nnoremap ]m       :make<CR>
 " reload configure file
-nnoremap ]r       :source ~/.vimrc<CR>
+nnoremap ]s       :source ~/.vimrc<CR>
 " open a terminal
 nnoremap ]t       :terminal<CR>
 " edit ~/.vimrc
-nnoremap ]ec      :split ~/.vimrc<CR>
+nnoremap ]v       :split ~/.vimrc<CR>
+" refresh current file
+nnoremap ]r       :e<CR>
+" open NERDTree
+nnoremap ]n       :NERDTree<CR>
+" open find utility
+nnoremap ]f       :fin 
 
 " shortcut for fugitive command Git push
 nnoremap ]gp      :Git push<CR>
@@ -139,7 +209,11 @@ nnoremap ]gc      :Git diff --stat --cached<CR>
 nnoremap ]go      :Git log --stat<CR>
 " shortcut for fugitive command Git pull
 nnoremap ]gu      :Git pull<CR>
+" shortcut for fugitive command :tab Git 
+nnoremap ]gt      :tab Git<CR>
 
+" shortcut for vim-go
+nnoremap ]gf      :GoFmt<CR>
 
 " insert mode map
 imap (    ()<Esc>i
@@ -189,7 +263,7 @@ command! Trimwhitespace call Trimwhitespace()
 " /*********************** plugins start ******************************/
 
 " vim-pathogen
-execute pathogen#infect()
+" execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
@@ -205,8 +279,8 @@ filetype plugin indent on
 
 " Syntax highlighting requires a loaded plugin
 syntax enable
-" set background=light
-set background=dark
+set background=light
+" set background=dark
 " let g:solarized_termcolors=256
 let g:solarized_underline = 0 " disable underlining, esp. for folds
 colorscheme solarized
@@ -214,7 +288,20 @@ colorscheme solarized
 " vim-airline configurations
 " let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
 let g:airline_solarized_bg='dark'  " set airline theme to solarized dark
+" AirlineTheme simple
 
+" vim-man configurations
+set keywordprg=:Man  " make the 'K' command open a manual page in a Vim window
+
+" vim-go configurations
+let g:go_gopls_enabled = 1
+
+" automatically show identifier's information in
+" status bar
+let g:go_auto_type_info = 1 
+set updatetime=100
+
+let g:go_auto_sameids = 0
 
 " /*********************** plugins end ******************************/
 
