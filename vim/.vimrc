@@ -216,10 +216,12 @@ nnoremap ]gt      :tab Git<CR>
 nnoremap ]gf      :GoFmt<CR>
 
 " insert mode map
-imap (    ()<Esc>i
-imap {    {}<Esc>i<CR><Esc>O
-imap [    []<Esc>i
-imap /*   /**/<Esc>hi  <Esc>i
+imap (       ()<Esc>i
+imap {       {}<Esc>i
+imap {<CR>   {<CR>}<Esc>O
+imap {}      {}
+imap [       []<Esc>i
+imap /**     /**/<Esc>hi  <Esc>i
 
 " /**************** map ****************/
 
