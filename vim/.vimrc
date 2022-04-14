@@ -250,6 +250,22 @@ fun! Trimwhitespace()
     call winrestview(save)    " restore this from the saved variable
 endfun
 
+" create a self-clearing autocommand group called 'qf' 
+augroup qf
+    " clear all autocommands in this group
+    autocmd!
+
+    " do :cwindow if the quickfix command doesn't start
+    " with a 'l' (:grep, :make, etc.)
+    autocmd QuickFixCmdPost [^l]* cwindow
+
+    " do :lwindow if the quickfix command starts with
+    " a 'l' (:lgrep, :lmake, etc.)
+    autocmd QuickFixCmdPost l* lwindow
+
+    " do :cwindow when Vim was started with the '-q' flag
+    autocmd VimEnter * cwindow
+augroup END
 " /**************** functions end ****************/
 
 " /**************** commands start ****************/
