@@ -222,7 +222,8 @@ imap {<CR>   {<CR>}<Esc>O
 imap {}      {}
 imap [       []<Esc>i
 imap /**     /**/<Esc>hi  <Esc>i
-
+imap ""      ""<Esc>i
+imap ''      ''<Esc>i
 " /**************** map ****************/
 
 
