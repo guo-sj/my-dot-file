@@ -134,10 +134,6 @@ set expandtab
 " set foldcolumn
 set foldcolumn=3
 
-" set auto mkview and loadview
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-
 " set coding order
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
