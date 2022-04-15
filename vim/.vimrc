@@ -44,6 +44,12 @@ Plugin 'vim-utils/vim-man'
 " sensible
 Plugin 'tpope/vim-sensible'
 
+" barbaric
+Plugin 'rlue/vim-barbaric'
+
+" You Complete Me
+Plugin 'ycm-core/YouCompleteMe'
+
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -204,7 +210,7 @@ nnoremap ]gc      :Git diff --stat --cached<CR>
 " shortcut for fugitive command Git log --stat
 nnoremap ]go      :Git log --stat<CR>
 " shortcut for fugitive command Git pull
-nnoremap ]gu      :Git pull<CR>
+nnoremap ]gl      :Git pull<CR>
 " shortcut for fugitive command :tab Git 
 nnoremap ]gt      :tab Git<CR>
 
