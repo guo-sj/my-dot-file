@@ -177,6 +177,7 @@ nnoremap <F9>     :w<CR>
 nnoremap <F10>    :q<CR>
 " get vim command window
 nnoremap <F8>     q:
+nnoremap <F5>     :windo e<CR>
 nnoremap ]q       :cnext<CR>
 nnoremap [q       :cprevious<CR>
 nnoremap <Up>     <C-W>k
