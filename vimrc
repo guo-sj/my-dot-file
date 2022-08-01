@@ -44,8 +44,11 @@ Plugin 'vim-utils/vim-man'
 " sensible
 Plugin 'tpope/vim-sensible'
 
-" for split and join operation
-Plugin 'AndrewRadev/splitjoin.vim'
+" barbaric
+Plugin 'rlue/vim-barbaric'
+
+" You Complete Me
+Plugin 'ycm-core/YouCompleteMe'
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
@@ -137,10 +140,6 @@ set expandtab
 " set foldcolumn
 set foldcolumn=3
 
-" set auto mkview and loadview
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-
 " set coding order
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
@@ -151,9 +150,6 @@ set autoindent
 " set dictionary
 set dictionary+=/usr/share/dict/words
 
-" enable mouse mode in normal mode and visual mode
-set mouse=nv
-
 " syntax folding
 set foldmethod=syntax
 let javaScript_fold=1             " JavaScript
@@ -161,9 +157,9 @@ let g:markdown_folding=1          " markdown
 
 " set path
 let pwd = getcwd()
-if pwd == "/root/Documents/guo-sj/github/guol-seaweedfs/weed"
+if pwd == "/home/guosj/Documents/guo-sj/github/seaweedfs"
     echo "enter directory seaweedfs"
-    set path=.,/usr/include,**
+    set path=.,/usr/include,weed/**
 elseif pwd == "/home/guosj/Documents/guo-sj/github/guo-sj.github.io/"
     echo "enter directory guo-sj.github.io"
     set path+=**
@@ -182,11 +178,8 @@ nnoremap <F10>    :q<CR>
 " get vim command window
 nnoremap <F8>     q:
 nnoremap <F5>     :windo e<CR>
-nnoremap <F7>     :GoBuild<CR>
 nnoremap ]q       :cnext<CR>
 nnoremap [q       :cprevious<CR>
-nnoremap ]o       :copen<CR>
-nnoremap ]x       :cclose<CR>
 nnoremap <Up>     <C-W>k
 nnoremap <Down>   <C-W>j
 nnoremap <Left>   <C-W>h
@@ -197,11 +190,11 @@ nnoremap <End>    A;<Esc>
 " perform make utility
 nnoremap ]m       :make<CR>
 " reload configure file
-nnoremap ]s       :source ~/.vim/.vimrc<CR>
+nnoremap ]s       :source ~/.vimrc<CR>
 " open a terminal
 nnoremap ]t       :terminal<CR>
 " edit ~/.vimrc
-nnoremap ]v       :split ~/.vim/.vimrc<CR>
+nnoremap ]v       :split ~/.vimrc<CR>
 " refresh current file
 nnoremap ]r       :e<CR>
 " open NERDTree
@@ -224,7 +217,6 @@ nnoremap ]gt      :tab Git<CR>
 
 " shortcut for vim-go
 nnoremap ]gf      :GoFmt<CR>
-nnoremap ]gb      :GoBuild<CR>
 
 " insert mode map
 imap (       ()<Esc>i
@@ -332,6 +324,7 @@ let g:go_auto_type_info = 1
 set updatetime=100
 
 let g:go_auto_sameids = 0
+
 " /*********************** plugins end ******************************/
 
 
