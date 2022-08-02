@@ -306,9 +306,9 @@ filetype plugin indent on
 
 " Syntax highlighting requires a loaded plugin
 syntax enable
-set background=light
+set background=dark
 " set background=dark
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 let g:solarized_underline = 0 " disable underlining, esp. for folds
 colorscheme solarized
 
