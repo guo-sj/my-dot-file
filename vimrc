@@ -47,8 +47,6 @@ Plugin 'tpope/vim-sensible'
 " barbaric
 Plugin 'rlue/vim-barbaric'
 
-" You Complete Me
-Plugin 'ycm-core/YouCompleteMe'
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
@@ -150,6 +148,9 @@ set autoindent
 " set dictionary
 set dictionary+=/usr/share/dict/words
 
+" enable mouse mode in normal mode and visual mode
+set mouse=nv
+
 " syntax folding
 set foldmethod=syntax
 let javaScript_fold=1             " JavaScript
@@ -180,6 +181,8 @@ nnoremap <F8>     q:
 nnoremap <F5>     :windo e<CR>
 nnoremap ]q       :cnext<CR>
 nnoremap [q       :cprevious<CR>
+nnoremap ]o       :copen<CR>
+nnoremap ]x       :cclose<CR>
 nnoremap <Up>     <C-W>k
 nnoremap <Down>   <C-W>j
 nnoremap <Left>   <C-W>h
@@ -335,6 +338,8 @@ filetype plugin on
 " abbreviation
 ab #b		/****************
 ab #e		****************/
+ab #a       add a post
+ab #u       update the post
 
 " colorscheme
 " colorscheme desert
