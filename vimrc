@@ -17,9 +17,6 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
 " vim-go
 Plugin 'fatih/vim-go'
 
@@ -152,7 +149,12 @@ set dictionary+=/usr/share/dict/words
 set mouse=nv
 
 " syntax folding
-set foldmethod=syntax
+if &filetype ==# 'python'
+    set foldmethod=indent
+else
+    set foldmethod=syntax
+endif
+
 let javaScript_fold=1             " JavaScript
 let g:markdown_folding=1          " markdown
 
@@ -183,10 +185,10 @@ nnoremap ]q       :cnext<CR>
 nnoremap [q       :cprevious<CR>
 nnoremap ]o       :copen<CR>
 nnoremap ]x       :cclose<CR>
-nnoremap <Up>     <C-W>k
-nnoremap <Down>   <C-W>j
-nnoremap <Left>   <C-W>h
-nnoremap <Right>  <C-W>l
+nnoremap <C-K>    <C-W>k
+nnoremap <C-J>    <C-W>j
+nnoremap <C-H>    <C-W>h
+nnoremap <C-L>    <C-W>l
 
 " add semicolon(;) to end of a line, useful for C/C++
 nnoremap <End>    A;<Esc>
