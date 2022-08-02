@@ -2,11 +2,13 @@
 	name = guosj
 	email = 515878133@qq.com
 [http]
+    sslCAInfo = /mnt/e/Git/mingw64/ssl/certs/ca-bundle.crt
     sslVerify = false
 [https]
 [alias]
 	st = status
 [core]
 	editor = vim
+	excludesfile = /home/guosj/.gitignore_global
 [credential]
 	helper = store
