@@ -99,6 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias kl='kill -9'
+alias kal='killall'
+alias fp='ps aux | grep ' # find process
 
 # my github directory
 jc=/home/guosj/Documents/jackie-mantou/github
