@@ -1,0 +1,12 @@
+[user]
+	name = guosj
+	email = 515878133@qq.com
+[http]
+    sslVerify = false
+[https]
+[alias]
+	st = status
+[core]
+	editor = vim
+[credential]
+	helper = store
