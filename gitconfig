@@ -7,8 +7,9 @@
 [https]
 [alias]
 	st = status
+    ci = commit
 [core]
 	editor = vim
-	excludesfile = /home/guosj/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [credential]
 	helper = store
