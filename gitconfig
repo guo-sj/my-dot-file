@@ -6,7 +6,9 @@
 [https]
 [alias]
 	st = status
+    ci = commit
 [core]
 	editor = vim
+    excludesfile = ~/.gitignore_global
 [credential]
 	helper = store
