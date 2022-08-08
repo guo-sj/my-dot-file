@@ -35,3 +35,6 @@
 [submodule "vim/bundle/vim-man"]
 	path = vim/bundle/vim-man
 	url = https://github.com/vim-utils/vim-man
+[submodule "anki"]
+	path = anki
+	url = https://github.com/guo-sj/anki.git
