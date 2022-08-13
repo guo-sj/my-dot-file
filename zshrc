@@ -129,6 +129,13 @@ fi
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+# ruby configurations
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+# To enable auto-switching of Rubies specified by .ruby-version files
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+ # run 'chruby' to see actual version
+chruby ruby-3.1.2
+
 # unset gds which stands for 'git diff --staged' in oh-my-zsh
 # instead I could use my own one that stands for 'git diff --stat'
 unalias gds
