@@ -106,11 +106,8 @@ alias kl='kill -9'
 alias kal='killall'
 alias fp='ps aux | grep ' # find process
 
-# my github directory
-jc=/home/guosj/Documents/jackie-mantou/github
-
-# my local bin directory
-mlb=/home/guosj/.local/bin
+# go path
+export PATH="/usr/local/go/bin:$PATH"
 
 # vi key bind shell
 bindkey -v
