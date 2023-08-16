@@ -1,0 +1,38 @@
+# mykd: mkdir in date, like 0814-2309
+# date
+# Wed Aug 16 23:31:51 CST 2023
+
+case $# in
+    0) ;;
+    *) echo "Usage: $0 " 1>&2; exit 2 ;;
+esac
+
+set `date`; shift # 这里使用 shift 使得原来的 $2 变成 $1，$3 变成 $2
+
+case $1 in
+    Jan*) mon=01 ;;
+    Feb*) mon=02 ;;
+    Mar*) mon=03 ;;
+    Apr*) mon=04 ;;
+    May*) mon=05 ;;
+    Jun*) mon=06 ;;
+    Jul*) mon=07 ;;
+    Aug*) mon=08 ;;
+    Sep*) mon=09 ;;
+    Otc*) mon=10 ;;
+    Nov*) mon=11 ;;
+    Dec*) mon=12 ;;
+    *) echo "mon interpreted fail!" 1>&2; exit 2 ;;
+esac
+
+day=$2
+tim=`echo $3 | awk -F: '{print $1 $2}'` # 这里使用 awk 来把“小时”和“时间”连接在一起，并赋值给 tim，
+                                        # 这里之所以用 tim 而不是用 time 是因为 time 是 shell 的保留字段，
+                                        # 这也说明了写 shell 脚本要考虑 PATH 的影响
+dir_name=$mon$day"-"$tim
+
+if ! test -d $dir_name; then
+    mkdir -v $dir_name
+fi
+
+exit 0
