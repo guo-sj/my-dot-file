@@ -1,0 +1,20 @@
+# install_common_repo: install guo-sj/anki, guo-sj/guo-sj.github.io, guo-sj/my-blog
+
+target_dir=$HOME/Documents/guosj
+target_repos=(
+    "https://github.com/guo-sj/anki"
+    "https://github.com/guo-sj/guo-sj.github.io"
+    "https://github.com/guo-sj/my-blog"
+)
+
+if !test -d $target_dir
+then
+    mkdir $target_dir
+fi
+
+cd $target_dir
+for i in "${target_repos[@]}"
+do
+    echo Clone $i:
+    git clone $i
+done
