@@ -26,6 +26,10 @@ case $1 in
 esac
 
 day=$2
+if ! test ${#day} -eq 2; then  # 这时判断一下 day 的长度，如果 day 的长度是 1，则给它前面补 0
+    day="0"$day
+fi
+
 tim=`echo $3 | awk -F: '{print $1 $2}'` # 这里使用 awk 来把“小时”和“时间”连接在一起，并赋值给 tim，
                                         # 这里之所以用 tim 而不是用 time 是因为 time 是 shell 的保留字段，
                                         # 这也说明了写 shell 脚本要考虑 PATH 的影响
