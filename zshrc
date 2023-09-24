@@ -107,7 +107,8 @@ alias kal='killall'
 alias fp='ps aux | grep ' # find process
 alias cx='chmod +x'
 alias lbc='source ~/.zshrc' # stands for 'Load BashrC'，尽管现在用 zsh 了，但是还是决定沿用原来的叫法，因为习惯了:-)
-
+alias cd='pushd >/dev/null 2>&1'
+alias csd='cd `dirs -p | sort | uniq | sed '\''s/~/\/Users\/guosj/g'\'' | fzf`' # change seleted directory
 # go path
 export PATH="/usr/local/go/bin:$PATH"
 
