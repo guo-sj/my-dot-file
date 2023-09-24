@@ -32,9 +32,6 @@ Plugin 'airblade/vim-gitgutter'
 " vim color -- solarized
 Plugin 'altercation/vim-colors-solarized'
 
-" fuzzy search
-Plugin 'ctrlpvim/ctrlp.vim'
-
 " man page
 Plugin 'vim-utils/vim-man'
 
@@ -43,7 +40,6 @@ Plugin 'tpope/vim-sensible'
 
 " barbaric
 Plugin 'rlue/vim-barbaric'
-
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
@@ -347,3 +343,5 @@ ab #u       update the post
 " colorscheme desert
 
 " /***************** others end ************************/
+" using fzf in vim
+set rtp+=/opt/homebrew/opt/fzf
