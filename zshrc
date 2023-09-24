@@ -106,11 +106,8 @@ alias kl='kill -9'
 alias kal='killall'
 alias fp='ps aux | grep ' # find process
 
-# my github directory
-jc=/home/guosj/Documents/jackie-mantou/github
-
-# my local bin directory
-mlb=/home/guosj/.local/bin
+# go path
+export PATH="/usr/local/go/bin:$PATH"
 
 # vi key bind shell
 bindkey -v
@@ -139,3 +136,6 @@ chruby ruby-3.1.2
 # unset gds which stands for 'git diff --staged' in oh-my-zsh
 # instead I could use my own one that stands for 'git diff --stat'
 unalias gds
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"

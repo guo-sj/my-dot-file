@@ -181,10 +181,10 @@ nnoremap ]q       :cnext<CR>
 nnoremap [q       :cprevious<CR>
 nnoremap ]o       :copen<CR>
 nnoremap ]x       :cclose<CR>
-nnoremap <C-K>    <C-W>k
-nnoremap <C-J>    <C-W>j
-nnoremap <C-H>    <C-W>h
-nnoremap <C-L>    <C-W>l
+nnoremap <UP>    <C-W>k
+nnoremap <DOWN>    <C-W>j
+nnoremap <LEFT>    <C-W>h
+nnoremap <RIGHT>    <C-W>l
 
 " add semicolon(;) to end of a line, useful for C/C++
 nnoremap <End>    A;<Esc>
@@ -213,8 +213,10 @@ nnoremap ]gc      :Git diff --stat --cached<CR>
 nnoremap ]go      :Git log --stat<CR>
 " shortcut for fugitive command Git pull
 nnoremap ]gl      :Git pull<CR>
-" shortcut for fugitive command :tab Git 
+" shortcut for fugitive command: tab Git 
 nnoremap ]gt      :tab Git<CR>
+" shortcut for fugitive comment: Gdiffsplit
+nnoremap ]gd      :Gdiffsplit<CR>
 
 " shortcut for vim-go
 nnoremap ]gf      :GoFmt<CR>
