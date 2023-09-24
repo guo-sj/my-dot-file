@@ -105,6 +105,8 @@ alias mv='mv -i'
 alias kl='kill -9'
 alias kal='killall'
 alias fp='ps aux | grep ' # find process
+alias cx='chmod +x'
+alias lbc='source ~/.zshrc' # stands for 'Load BashrC'，尽管现在用 zsh 了，但是还是决定沿用原来的叫法，因为习惯了:-)
 
 # go path
 export PATH="/usr/local/go/bin:$PATH"
