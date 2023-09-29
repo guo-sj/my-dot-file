@@ -32,6 +32,3 @@
 [submodule "vim/bundle/vim-man"]
 	path = vim/bundle/vim-man
 	url = https://github.com/vim-utils/vim-man
-[submodule "xkbswitch-macosx"]
-	path = xkbswitch-macosx
-	url = https://github.com/myshov/xkbswitch-macosx
