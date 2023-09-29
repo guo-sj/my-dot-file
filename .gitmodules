@@ -35,3 +35,6 @@
 [submodule "anki"]
 	path = anki
 	url = https://github.com/guo-sj/anki.git
+[submodule "xkbswitch-macosx"]
+	path = xkbswitch-macosx
+	url = https://github.com/myshov/xkbswitch-macosx
