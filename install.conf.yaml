@@ -13,7 +13,6 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.local: local
-      # /usr/local/bin/xkbswitch: xkbswitch-macosx/bin/xkbswitch # vim-barbaric 在 macos 上有对 xkbswitch 的依赖
 
 - create:
     - ~/downloads
