@@ -19,7 +19,7 @@ case $1 in
     Jul*) mon=07 ;;
     Aug*) mon=08 ;;
     Sep*) mon=09 ;;
-    Otc*) mon=10 ;;
+    Oct*) mon=10 ;;
     Nov*) mon=11 ;;
     Dec*) mon=12 ;;
     *) echo "mon interpreted fail!" 1>&2; exit 2 ;;
