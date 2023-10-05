@@ -32,9 +32,6 @@ Plugin 'airblade/vim-gitgutter'
 " vim color -- solarized
 Plugin 'altercation/vim-colors-solarized'
 
-" fuzzy search
-Plugin 'ctrlpvim/ctrlp.vim'
-
 " man page
 Plugin 'vim-utils/vim-man'
 
@@ -43,7 +40,6 @@ Plugin 'tpope/vim-sensible'
 
 " barbaric
 Plugin 'rlue/vim-barbaric'
-
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
@@ -185,10 +181,10 @@ nnoremap ]q       :cnext<CR>
 nnoremap [q       :cprevious<CR>
 nnoremap ]o       :copen<CR>
 nnoremap ]x       :cclose<CR>
-nnoremap <C-K>    <C-W>k
-nnoremap <C-J>    <C-W>j
-nnoremap <C-H>    <C-W>h
-nnoremap <C-L>    <C-W>l
+nnoremap <UP>    <C-W>k
+nnoremap <DOWN>    <C-W>j
+nnoremap <LEFT>    <C-W>h
+nnoremap <RIGHT>    <C-W>l
 
 " add semicolon(;) to end of a line, useful for C/C++
 nnoremap <End>    A;<Esc>
@@ -217,8 +213,10 @@ nnoremap ]gc      :Git diff --stat --cached<CR>
 nnoremap ]go      :Git log --stat<CR>
 " shortcut for fugitive command Git pull
 nnoremap ]gl      :Git pull<CR>
-" shortcut for fugitive command :tab Git 
+" shortcut for fugitive command: tab Git 
 nnoremap ]gt      :tab Git<CR>
+" shortcut for fugitive comment: Gdiffsplit
+nnoremap ]gd      :Gdiffsplit<CR>
 
 " shortcut for vim-go
 nnoremap ]gf      :GoFmt<CR>
@@ -306,9 +304,9 @@ filetype plugin indent on
 
 " Syntax highlighting requires a loaded plugin
 syntax enable
-set background=light
+set background=dark
 " set background=dark
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 let g:solarized_underline = 0 " disable underlining, esp. for folds
 colorscheme solarized
 
@@ -347,3 +345,5 @@ ab #u       update the post
 " colorscheme desert
 
 " /***************** others end ************************/
+" using fzf in vim
+set rtp+=/opt/homebrew/opt/fzf

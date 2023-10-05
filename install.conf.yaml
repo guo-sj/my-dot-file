@@ -12,6 +12,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.local: local
 
 - create:
     - ~/downloads
@@ -19,5 +20,3 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-
-
