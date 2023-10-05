@@ -106,9 +106,12 @@ alias kl='kill -9'
 alias kal='killall'
 alias fp='ps aux | grep ' # find process
 alias cx='chmod +x'
-alias lbc='source ~/.zshrc' # stands for 'Load BashrC'，尽管现在用 zsh 了，但是还是决定沿用原来的叫法，因为习惯了:-)
 alias cd='pushd >/dev/null 2>&1'
 alias csd='cd `dirs -p | sort | uniq | fzf | sed '\''s/~/\/Users\/guosj/g'\''`' # change seleted directory
+
+alias lbc='source ~/.zshrc' # stands for 'Load BashrC'，尽管现在用 zsh 了，但是还是决定沿用原来的叫法，因为习惯了:-)
+alias cbc='cat ~/.zshrc' # stands for 'Cat BashrC'
+alias vbc='vim ~/.zshrc' # stands for 'Vim BashrC'
 
 # alias about going to somewhere
 alias goguosj='cd $HOME/Documents/guosj/'
@@ -134,16 +137,12 @@ fi
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
-# ruby configurations
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-# To enable auto-switching of Rubies specified by .ruby-version files
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
- # run 'chruby' to see actual version
-chruby ruby-3.1.2
-
 # unset gds which stands for 'git diff --staged' in oh-my-zsh
 # instead I could use my own one that stands for 'git diff --stat'
 unalias gds
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3
