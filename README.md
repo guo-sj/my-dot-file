@@ -16,9 +16,19 @@ Bootstraped by [dotbot](https://github.com/anishathalye/dotbot).
 
 ## 使用方法
 
+### 常规安装
 ```sh
 git clone https://github.com/guo-sj/my-dot-file
 cd my-dot-file
 ./install
 ```
 
+### 下载常用的 github repo
+```sh
+./install_common_repo
+```
+
+这个脚本会下载我常用的 3 个 github repo 到目录 `$HOME/Documents/guosj`：
+- [anki](https://github.com/guo-sj/anki)
+- [guo-sj.github.io](https://github.com/guo-sj/guo-sj.github.io)
+- [my-blog](https://github.com/guo-sj/my-blog)

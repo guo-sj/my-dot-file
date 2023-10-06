@@ -9,7 +9,7 @@ target_repos=(
 
 if !test -d $target_dir
 then
-    mkdir $target_dir
+    mkdir -p $target_dir
 fi
 
 cd $target_dir
