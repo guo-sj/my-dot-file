@@ -2,35 +2,35 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
+[submodule "vim_home/bundle/nerdtree"]
+	path = vim_home/bundle/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule "vim/bundle/vim-colors-solarized"]
-	path = vim/bundle/vim-colors-solarized
+[submodule "vim_home/bundle/vim-colors-solarized"]
+	path = vim_home/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/bundle/vim-sensible"]
-	path = vim/bundle/vim-sensible
+[submodule "vim_home/bundle/vim-sensible"]
+	path = vim_home/bundle/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
-[submodule "vim/bundle/vim-barbaric"]
-	path = vim/bundle/vim-barbaric
+[submodule "vim_home/bundle/vim-barbaric"]
+	path = vim_home/bundle/vim-barbaric
 	url = https://github.com/rlue/vim-barbaric.git
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
+[submodule "vim_home/bundle/vim-airline"]
+	path = vim_home/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
+[submodule "vim_home/bundle/vim-fugitive"]
+	path = vim_home/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
+[submodule "vim_home/bundle/vim-gitgutter"]
+	path = vim_home/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/vim-go"]
-	path = vim/bundle/vim-go
+[submodule "vim_home/bundle/vim-go"]
+	path = vim_home/bundle/vim-go
 	url = https://github.com/fatih/vim-go
-[submodule "vim/bundle/Vundle.vim"]
-	path = vim/bundle/Vundle.vim
+[submodule "vim_home/bundle/Vundle.vim"]
+	path = vim_home/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
-[submodule "vim/bundle/vim-man"]
-	path = vim/bundle/vim-man
+[submodule "vim_home/bundle/vim-man"]
+	path = vim_home/bundle/vim-man
 	url = https://github.com/vim-utils/vim-man
 [submodule "ohmyzsh"]
 	path = ohmyzsh

@@ -13,6 +13,7 @@ Bootstraped by [dotbot](https://github.com/anishathalye/dotbot).
 - [ ] 增加如何安装 [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh.git) 的脚本
 - [ ] 增加如何安装 [fzf](https://github.com/junegunn/fzf) 的脚本
 - [x] 把 csd (Change Selected Directory) 功能增加到 zshrc 中，预计时间 0.5h
+- [ ] 把 [vim](https://github.com/vim/vim.git) 和 [tmux](https://github.com/tmux/tmux.git) 的安装也加进来
 
 ## 使用方法
 
