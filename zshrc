@@ -117,6 +117,8 @@ alias vbc='vim ~/.zshrc' # stands for 'Vim BashrC'
 alias goguosj='cd $HOME/Documents/guosj/'
 alias godoc='cd $HOME/Documents/'
 
+alias vf='vim `fzf`'
+
 # go path
 export PATH="/usr/local/go/bin:$PATH"
 

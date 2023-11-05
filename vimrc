@@ -201,7 +201,7 @@ nnoremap ]r       :e<CR>
 " open NERDTree
 nnoremap ]n       :NERDTree<CR>
 " open find utility
-nnoremap ]f       :fin 
+nnoremap ]f       :fin
 
 " shortcut for fugitive command Git push
 nnoremap ]gp      :Git push<CR>
@@ -213,7 +213,7 @@ nnoremap ]gc      :Git diff --stat --cached<CR>
 nnoremap ]go      :Git log --stat<CR>
 " shortcut for fugitive command Git pull
 nnoremap ]gl      :Git pull<CR>
-" shortcut for fugitive command: tab Git 
+" shortcut for fugitive command: tab Git
 nnoremap ]gt      :tab Git<CR>
 " shortcut for fugitive comment: Gdiffsplit
 nnoremap ]gd      :Gdiffsplit<CR>
@@ -260,7 +260,7 @@ fun! Trimwhitespace()
     call winrestview(save)    " restore this from the saved variable
 endfun
 
-" create a self-clearing autocommand group called 'qf' 
+" create a self-clearing autocommand group called 'qf'
 augroup qf
     " clear all autocommands in this group
     autocmd!
@@ -276,6 +276,26 @@ augroup qf
     " do :cwindow when Vim was started with the '-q' flag
     autocmd VimEnter * cwindow
 augroup END
+
+" 方便在博客中插入图片
+" 使用方法 :call InsertPngTextOnCurrentLine("获奖照片", "2023_1021_anhui_tour/1021_huo_jiang.png")
+function! InsertPngTextOnCurrentLine(pngName, pngFileName)
+  " 保存当前光标位置
+  let save_cursor = getpos(".")
+
+  " 获取当前行号
+  let current_line = line(".")
+
+  " 切换到当前行
+  execute "normal! " . current_line . "G"
+
+  " 切换到插入模式并输入指定文本
+  execute "normal! I![" . a:pngName . "](/assets/" . a:pngFileName . ")"
+
+  " 恢复光标位置
+  call setpos('.', save_cursor)
+endfunction
+
 " /**************** functions end ****************/
 
 " /**************** commands start ****************/
@@ -323,7 +343,7 @@ let g:go_gopls_enabled = 1
 
 " automatically show identifier's information in
 " status bar
-let g:go_auto_type_info = 1 
+let g:go_auto_type_info = 1
 set updatetime=100
 
 let g:go_auto_sameids = 0
