@@ -17,9 +17,6 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 
-" vim-go
-Plugin 'fatih/vim-go'
-
 " NERDtree
 Plugin 'preservim/nerdtree'
 
@@ -29,14 +26,8 @@ Plugin 'vim-airline/vim-airline'
 " gitgutter
 Plugin 'airblade/vim-gitgutter'
 
-" vim color -- solarized
-Plugin 'altercation/vim-colors-solarized'
-
 " man page
 Plugin 'vim-utils/vim-man'
-
-" sensible
-Plugin 'tpope/vim-sensible'
 
 " barbaric
 Plugin 'rlue/vim-barbaric'
@@ -328,7 +319,6 @@ set background=dark
 " set background=dark
 let g:solarized_termcolors=256
 let g:solarized_underline = 0 " disable underlining, esp. for folds
-colorscheme solarized
 
 " vim-airline configurations
 " let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
@@ -338,15 +328,15 @@ let g:airline_solarized_bg='dark'  " set airline theme to solarized dark
 " vim-man configurations
 set keywordprg=:Man  " make the 'K' command open a manual page in a Vim window
 
-" vim-go configurations
-let g:go_gopls_enabled = 1
-
 " automatically show identifier's information in
 " status bar
 let g:go_auto_type_info = 1
 set updatetime=100
 
 let g:go_auto_sameids = 0
+
+" vim-barbaric 
+set ttimeoutlen=0
 
 " /*********************** plugins end ******************************/
 
@@ -362,7 +352,7 @@ ab #a       add a post
 ab #u       update the post
 
 " colorscheme
-" colorscheme desert
+colorscheme desert
 
 " /***************** others end ************************/
 " using fzf in vim

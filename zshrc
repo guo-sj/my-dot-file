@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/guosj/.oh-my-zsh"
+export ZSH="/Users/guosj-mac-mini/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,7 +107,7 @@ alias kal='killall'
 alias fp='ps aux | grep ' # find process
 alias cx='chmod +x'
 alias cd='pushd >/dev/null 2>&1'
-alias csd='cd `dirs -p | sort | uniq | fzf | sed '\''s/~/\/Users\/guosj/g'\''`' # change seleted directory
+alias csd='cd `dirs -p | sort | uniq | fzf | sed '\''s/~/\/Users\/guosj-mac-mini/g'\''`' # change seleted directory
 
 alias lbc='source ~/.zshrc' # stands for 'Load BashrC'，尽管现在用 zsh 了，但是还是决定沿用原来的叫法，因为习惯了:-)
 alias cbc='cat ~/.zshrc' # stands for 'Cat BashrC'
@@ -145,6 +145,6 @@ unalias gds
 export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
+# source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+# source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+# chruby ruby-3.1.3
