@@ -322,7 +322,7 @@ let g:solarized_underline = 0 " disable underlining, esp. for folds
 
 " vim-airline configurations
 " let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
-let g:airline_solarized_bg='dark'  " set airline theme to solarized dark
+" let g:airline_solarized_bg='dark'  " set airline theme to solarized dark
 " AirlineTheme simple
 
 " vim-man configurations
