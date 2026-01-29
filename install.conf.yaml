@@ -7,12 +7,12 @@
 
 - link:
     ~/.tmux.conf: tmux.conf
-    ~/.vim: vim_home
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
-    ~/.gitconfig: gitconfig
-    ~/.gitignore_global: gitignore_global
-    ~/.local: local
+      #~/.vim: vim_home
+      #~/.vimrc: vimrc
+      #~/.zshrc: zshrc
+      #~/.gitconfig: gitconfig
+      #~/.gitignore_global: gitignore_global
+      #~/.local: local
 
 - create:
     - ~/downloads
